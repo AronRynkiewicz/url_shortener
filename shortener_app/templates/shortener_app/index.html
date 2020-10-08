@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shortener_app/css/index_style.css' %}">
+</head>
+<body>
+    <div class="main">
+        <h1>Welcome!</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.user_url }}
+            <input type="submit" name="Generate new URL">
+        </form>
+    </div>
+
+</body>
+</html>

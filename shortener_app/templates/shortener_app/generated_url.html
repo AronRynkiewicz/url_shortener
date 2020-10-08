@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated URL</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shortener_app/css/generated_url_style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'shortener_app/css/index_style.css' %}">
+    <script src="{% static 'shortener_app/js/scripts.js' %}"> </script>
+</head>
+<body>
+    <div class="main">
+        <h1>Your generated URL:</h1>
+        <input type="text" value="{{url}}" id="generatedURL" size="40">
+
+        <div class="tooltip">
+            <button onclick="CopyFunction()" onmouseout="outFunc()">
+              <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              Copy text
+            </button>
+        </div>
+        <p>Disclaimer: Your link will be valid for next 24 hours</p>
+        <p>
+            <a href="/">
+                <input type="button" value="Generate another URL" />
+            </a>
+        </p>
+    </div>
+</body>
+</html>
