@@ -5,6 +5,7 @@ Simple URL shortener made with:
 * mongoDB
 * basic HTML
 * basic CSS
+* basic JS
 
 # Showcase
 * Simple and clean main page:
